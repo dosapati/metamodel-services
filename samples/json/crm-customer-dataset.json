@@ -1,0 +1,303 @@
+{
+  "datasetId": "7a028b26-6d3f-11ec-90d6-0242ac120003",
+  "datasetName": "CRM-NECustomerData",
+  "datasetDescription": "us crm customers from North East coast",
+  "businessUnitInfo": {
+    "name": "CRM"
+  },
+  "sourceType": "delimited",
+  "targetType": "bigQuery",
+  "version": "0.1",
+  "status": "Active",
+  "comments": "Dataset contains loans customer information",
+  "sourceInfo": {
+    "sourceId": "7a028da6-6d3f-11ec-90d6-0242ac120003",
+    "sourceLoadType": "batch",
+    "sourceStatus": "Loaded to GCS Bucket",
+    "sourceSystem": "NE CRM data",
+    "sourceTableInfo": {},
+    "sourceSchema": [
+      {
+        "attributeName": "CustomerFirstName",
+        "businessName": "Customer First Name",
+        "attributeDesciption": "First Name of the customer",
+        "attributePosition": "1",
+        "attributeType": "STRING",
+        "attributeFormat": "",
+        "attributeLength": 20,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1234
+      },
+      {
+        "attributeName": "CustomerLastName",
+        "businessName": "Customer Last Name",
+        "attributeDesciption": "Last Name of the customer",
+        "attributePosition": "2",
+        "attributeType": "STRING",
+        "attributeFormat": "",
+        "attributeLength": 15,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1235
+      },
+      {
+        "attributeName": "CustomerAddress",
+        "businessName": "Customer Address",
+        "attributeDesc": "Address of the customer",
+        "attributePosition": "3",
+        "attributeType": "STRING",
+        "attributeFormat": "",
+        "attributeLength": 100,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1236
+      },
+      {
+        "attributeName": "Age",
+        "businessName": "Age",
+        "attributeDesc": "Age of the customer",
+        "attributePosition": "4",
+        "attributeType": "STRING",
+        "attributeFormat": "",
+        "attributeLength": 100,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1237
+      },
+      {
+        "attributeName": "Zipcode",
+        "businessName": "Customer Zipcode",
+        "attributeDesc": "Zipcode",
+        "attributePosition": "5",
+        "attributeType": "STRING",
+        "attributeFormat": "",
+        "attributeLength": 100,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1238
+      },
+      {
+        "attributeName": "CustomerStartDate",
+        "businessName": "Customer Start Date",
+        "attributeDesc": "Credit Card details for the customer",
+        "attributePosition": "6",
+        "attributeType": "DATE",
+        "attributeFormat": "",
+        "attributeLength": 100,
+        "attributeScale": "",
+        "attributeDefaultValue": "",
+        "isPII": "No",
+        "isEncrypted": "",
+        "governanceAttributeId": 1239
+      }
+    ],
+    "sourceFeedInfo": {
+      "sourceFeedProviderInfo": {
+        "providerType": "Cloud",
+        "providerInfo": {
+          "providerName": "GCP",
+          "bucketName": "sample-bucket",
+          "filePath": "customer/customer.csv"
+        }
+      },
+      "feedTypeInfo": {
+        "delimiter": ",",
+        "errorThreshold": 0,
+        "sourceEncoding": "utf-8",
+        "sourceCharacterSet": "",
+        "skipHeader": "1",
+        "skipFooter": "0"
+      }
+    }
+  },
+  "targetInfo": {
+    "targetId": "7a028ed2-6d3f-11ec-90d6-0242ac120003",
+    "targetSchema": [
+      {
+        "attributeName": "CustomerFName",
+        "attributeDatatype": "STRING",
+        "attributeMode": "REQUIRED"
+      },
+      {
+        "attributeName": "CustomerLName",
+        "attributeDatatype": "STRING",
+        "attributeMode": "NULLABLE"
+      },
+      {
+        "attributeName": "CustomerAddressLine1",
+        "attributeDatatype": "STRING",
+        "attributeMode": "NULLABLE"
+      },
+      {
+        "attributeName": "CustomerAddressLine2",
+        "attributeDatatype": "STRING",
+        "attributeMode": "NULLABLE"
+      },
+      {
+        "attributeName": "ZipCode",
+        "attributeDatatype": "STRING",
+        "attributeMode": "NULLABLE"
+      },
+      {
+        "attributeName": "Age",
+        "attributeDatatype": "INTEGER",
+        "attributeMode": "NULLABLE"
+      },
+      {
+        "attributeName": "CustomerStartDate",
+        "attributeDatatype": "DATE",
+        "attributeMode": "NULLABLE"
+      }
+    ],
+    "targetTableInfo": {
+      "bqProjectName": "xyz",
+      "bqDatasetName": "amexpoc",
+      "bqTableName": "crm_customer_details",
+      "bqPartitionName": "",
+      "createDisposition": "CREATE_NEVER",
+      "writeDisposition": "WRITE_APPEND",
+      "tableType": "staging",
+      "tableDescription": "Details of the customer",
+      "businessName": "customerDetails"
+    }
+  },
+  "governanceInfo": {
+    "governanceDatasetId": "7a028b26-6d3f-11ec-90d6-0242ac120078",
+    "governanceDatasetName": "Customer Details",
+    "governanceSystemName": "Collibra"
+  },
+  "businessContactInfo": {
+    "type": "Contractor",
+    "owner": "Peter Bob",
+    "businessOwner": "Joseph",
+    "emailAddress": "peter.bob@abcd.com",
+    "phoneNumber": "91-9936475849",
+    "lob": "Finance",
+    "businessOwnerId": 17867567
+  },
+  "techContactInfo": {
+    "type": "Data Engineer",
+    "owner": "Hari",
+    "businessOwner": "Shashanka",
+    "emailAddress": "hari@accenture.com",
+    "phoneNumber": "91-7834567789",
+    "techOwnerId": 12345678
+  },
+  "loadInfo": {
+    "loadFrequency": "daily",
+    "loadType": "batch",
+    "maxRetry": 1,
+    "retryInterval": "60",
+    "loadDate": "02-18-2021",
+    "loadStatus": "initiated"
+  },
+  "dataClassificationInfo": {
+    "classificationId": 1,
+    "classificationName": "Level1 Security Data",
+    "classificationDesc": "Customer data contains Credit Card Numbers which is of PII"
+  },
+  "sourceStorageEstimatesInfo": {
+    "size": "50 MB",
+    "duration": "1 year"
+  },
+  "targetStorageEstimatesInfo": {
+    "size": "40 MB",
+    "duration": "1 year"
+  },
+  "usecases": [
+    {
+      "name": "direct to consumer (DTC) initiatives",
+      "description": "Building a first-party data asset through direct to consumer (DTC) initiatives"
+    },
+    {
+      "name": "cross-channel customer lifecycle marketing",
+      "description": "Implementing and optimizing cross-channel customer lifecycle marketing"
+    },
+    {
+      "name": "digital products & experiences",
+      "description": "Creating new digital products & experiences for specific audiences"
+    }
+  ],
+  "securityInfo": {
+    "encryptionType": "CSEK",
+    "encryptionInfo": {
+      "encryptionKey": "**********"
+    }
+  },
+  "notificationsInfo": [
+    {
+      "notificationType": "email",
+      "notificationName": "Customer Load Status Mail",
+      "notificationToList": [
+        "abcd@accenture.com",
+        "djsg@accenture.com"
+      ],
+      "notificationCcList": [
+        "abnd@accenture.com"
+      ],
+      "notificationBccList": []
+    },
+    {
+      "notificationType": "SMS",
+      "notificationName": "Customer Load Status SMS",
+      "notificationToList": [
+        "91-123456789",
+        "91-1638484959"
+      ]
+    }
+  ],
+  "refreshInfo": {
+    "refreshType": "full"
+  },
+  "dataAvailabilitySLAInfo": {
+    "sla": "daily",
+    "slaBreach": "Yes",
+    "slaContact": "Peter@accenture.com"
+  },
+  "dataHealthInfo": {
+    "completeness": 94,
+    "consistency": 76
+  },
+  "requesterInfo": {
+    "requesterName": "John",
+    "requesterEmailId": "john@accenture.com",
+    "requesterBusinessUnit": "Customer Support"
+  },
+  "localizationInfo": {
+    "datasetRegion": "us-east1b",
+    "datasetLocation": "us-east1"
+  },
+  "archivalStrategyInfo": {
+    "archivalLocation": "gs://customer-bucket/customer",
+    "archivalDuration": "90"
+  },
+  "entitlementsInfo": {
+    "userGroup": [
+      "Customer"
+    ],
+    "userGroupMembersIds": [
+      "123456",
+      "789078"
+    ]
+  },
+  "complianceInfo": {
+    "complianceStatus": "Approved",
+    "complianceContact": "Joseph"
+  },
+  "tags": [
+    "crm customer",
+    "customers",
+    "us crm customers from East coast"
+  ]
+}
